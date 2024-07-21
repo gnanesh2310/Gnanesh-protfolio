@@ -1,28 +1,21 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const modal = document.getElementById('imageModal');
-  const modalImg = document.getElementById('modalImg');
-  const captionText = document.getElementById('caption');
-  const closeBtn = document.querySelector('.close');
+// Get the modal
+var modal = document.getElementById("myModal");
 
-  function openModal(img) {
-      modal.style.display = 'block';
-      modalImg.src = img.src;
-      captionText.innerHTML = img.alt;
-  }
+// Get the image and insert it inside the modal
+var img = document.querySelector(".profile-photo");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
 
-  function closeModal() {
-      modal.style.display = 'none';
-  }
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
 
-  document.querySelectorAll('.event-photo').forEach(img => {
-      img.addEventListener('click', () => openModal(img));
-  });
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
 
-  closeBtn.addEventListener('click', closeModal);
-
-  window.addEventListener('click', (event) => {
-      if (event.target === modal) {
-          closeModal();
-      }
-  });
-});
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
