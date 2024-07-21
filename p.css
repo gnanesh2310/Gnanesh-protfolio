@@ -52,15 +52,7 @@ header h1 {
   border-color: #FF6347 transparent transparent transparent;
 }
 
-.ribbon-top-right {
-  top: -20px; /* Adjusted for increased size */
-  right: -20px; /* Adjusted for increased size */
-}
 
-.ribbon-top-right::before {
-  border-width: 100px 0 0 100px; /* Increased size */
-  border-color: #FF6347 transparent transparent transparent;
-}
 
 .ribbon-bottom-left {
   bottom: -20px; /* Adjusted for increased size */
@@ -77,10 +69,7 @@ header h1 {
   right: -20px; /* Adjusted for increased size */
 }
 
-.ribbon-bottom-right::before {
-  border-width: 0 0 100px 100px; /* Increased size */
-  border-color: transparent transparent #FF6347 transparent;
-}
+
 
 /* Sections */
 section {
