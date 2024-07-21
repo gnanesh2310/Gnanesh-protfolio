@@ -99,27 +99,51 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Responsive Design for Medium Screens */
+@media (max-width: 1024px) and (min-width: 769px) {
   body {
-      padding: 0 1em;
+    padding: 0 2em; /* Add padding for medium screens to keep content well-spaced */
   }
 
   section {
-      padding: 1.5em;
-      margin: 1.5em 0;
+    margin: 2em auto; /* Center sections */
+    padding: 2em; /* Consistent padding */
   }
 
   li {
-      padding: 0.75em;
+    padding: 1em; /* Consistent padding inside list items */
   }
 
   .profile-photo {
-      max-width: 100px;
+    max-width: 120px; /* Adjusted for medium screens */
   }
 
   .event-photo {
-      width: 120px;
+    width: 140px; /* Adjusted size for medium screens */
+  }
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  body {
+    padding: 0 1em;
+  }
+
+  section {
+    padding: 1.5em;
+    margin: 1.5em 0;
+  }
+
+  li {
+    padding: 0.75em;
+  }
+
+  .profile-photo {
+    max-width: 100px;
+  }
+
+  .event-photo {
+    width: 120px;
   }
 }
 
