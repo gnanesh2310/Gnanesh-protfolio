@@ -15,13 +15,71 @@ header {
   text-align: center;
   padding: 2em 0;
   position: relative;
-  clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0%, 100% 70%, 0% 100%);
   margin-bottom: 2em;
 }
 
 header h1 {
   margin: 0;
   font-size: 2.5em;
+}
+
+/* Ribbons */
+.ribbon {
+  position: absolute;
+  width: 200px; /* Increased width */
+  height: 200px; /* Increased height */
+  overflow: hidden;
+}
+
+.ribbon::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.ribbon-top-left {
+  top: -20px; /* Adjusted for increased size */
+  left: -20px; /* Adjusted for increased size */
+}
+
+.ribbon-top-left::before {
+  border-width: 100px 100px 0 0; /* Increased size */
+  border-color: #FF6347 transparent transparent transparent;
+}
+
+.ribbon-top-right {
+  top: -20px; /* Adjusted for increased size */
+  right: -20px; /* Adjusted for increased size */
+}
+
+.ribbon-top-right::before {
+  border-width: 100px 0 0 100px; /* Increased size */
+  border-color: #FF6347 transparent transparent transparent;
+}
+
+.ribbon-bottom-left {
+  bottom: -20px; /* Adjusted for increased size */
+  left: -20px; /* Adjusted for increased size */
+}
+
+.ribbon-bottom-left::before {
+  border-width: 0 100px 100px 0; /* Increased size */
+  border-color: transparent #FF6347 transparent transparent;
+}
+
+.ribbon-bottom-right {
+  bottom: -20px; /* Adjusted for increased size */
+  right: -20px; /* Adjusted for increased size */
+}
+
+.ribbon-bottom-right::before {
+  border-width: 0 0 100px 100px; /* Increased size */
+  border-color: transparent transparent #FF6347 transparent;
 }
 
 /* Sections */
@@ -142,27 +200,26 @@ li {
 /* Footer */
 footer {
   text-align: center;
-  padding: 1em 0;
-  background-color: #f1f1f1;
-}
-
-footer a {
-  color: #4CAF50;
-  text-decoration: none;
-  font-size: 1.1em;
-  background-color: #fff;
-  padding: 0.5em 1em;
-  border: 2px solid #4CAF50;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-footer a:hover {
+  padding: 1em;
   background-color: #4CAF50;
   color: white;
 }
 
-/* Responsive Design for Medium Screens */
+.download-button {
+  background-color: #FF6347;
+  color: white;
+  padding: 1em 2em;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.download-button:hover {
+  background-color: #ff4500;
+}
+
+/* Responsive Design */
 @media (max-width: 1024px) and (min-width: 769px) {
   body {
       padding: 0 2em;
@@ -182,15 +239,14 @@ footer a:hover {
   }
 }
 
-/* Responsive Design for Small Screens */
 @media (max-width: 768px) {
   body {
       padding: 0 1em;
   }
 
   section {
-      margin: 1em auto;
-      padding: 1em;
+      padding: 1.5em;
+      margin: 1.5em 0;
   }
 
   .profile-photo {
@@ -202,8 +258,15 @@ footer a:hover {
   }
 }
 
+/* Keyframes */
 @keyframes gradient {
-0% { background-position: 0% 0%; }
-50% { background-position: 100% 100%; }
-100% { background-position: 0% 0%; }
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
 }
