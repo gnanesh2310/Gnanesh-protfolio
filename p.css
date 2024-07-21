@@ -1,116 +1,130 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background: linear-gradient(135deg, #ff9999, #66b3ff, #99ff99, #ffcc99);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #ff9999, #66b3ff, #99ff99, #ffcc99);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
 }
 
 section {
-    padding: 2em;
-    margin: 2em 0; /* Increased margin for better spacing between sections */
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 2em;
+  margin: 2em auto; /* Centered sections */
+  max-width: 900px; /* Constrain section width */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    border-bottom: 2px solid #4CAF50;
-    padding-bottom: 0.5em;
+  border-bottom: 2px solid #4CAF50;
+  padding-bottom: 0.5em;
 }
 
 .profile-photo {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: block;
-    margin: 0 auto;
+  max-width: 150px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 li {
-    background-color: #f9f9f9;
-    margin: 0.5em 0;
-    padding: 1em;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+  background-color: #f9f9f9;
+  margin: 0.5em 0;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
 .event-photo {
-    width: 150px; /* Adjust size as needed */
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  width: 150px; /* Adjust size as needed */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .experience-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
 }
 
 .experience-item img {
-    margin-left: 1em;
+  margin-left: 1em;
 }
 
 footer {
-    text-align: center;
-    padding: 1em 0;
-    background-color: #f1f1f1;
+  text-align: center;
+  padding: 1em 0;
+  background-color: #f1f1f1;
 }
 
 a {
-    color: #4CAF50;
-    text-decoration: none;
+  color: #4CAF50;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    body {
-        padding: 0 1em;
-    }
+  body {
+      padding: 0 1em;
+  }
 
-    section {
-        padding: 1.5em; /* Increased padding for better readability */
-        margin: 1.5em 0; /* Increased margin for better spacing between sections */
-    }
+  section {
+      padding: 1.5em;
+      margin: 1.5em 0;
+  }
 
-    li {
-        padding: 0.75em; /* Increased padding inside list items */
-    }
+  li {
+      padding: 0.75em;
+  }
 
-    .profile-photo {
-        width: 100px;
-        height: 100px;
-    }
+  .profile-photo {
+      max-width: 100px;
+  }
 
-    .event-photo {
-        width: 120px;
-    }
+  .event-photo {
+      width: 120px;
+  }
 }
 
 @keyframes gradient {
-    0% { background-position: 0% 0%; }
-    50% { background-position: 100% 100%; }
-    100% { background-position: 0% 0%; }
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
 }
