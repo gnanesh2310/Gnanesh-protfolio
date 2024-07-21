@@ -1,5 +1,6 @@
+/* General styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,13 +13,22 @@ header {
   background-color: #4CAF50;
   color: white;
   text-align: center;
-  padding: 1em 0;
+  padding: 2em 0;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+  margin-bottom: 2em;
 }
 
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+/* Sections */
 section {
   padding: 2em;
-  margin: 2em auto; /* Centered sections */
-  max-width: 900px; /* Constrain section width */
+  margin: 2em auto;
+  max-width: 900px;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -29,6 +39,7 @@ h2 {
   padding-bottom: 0.5em;
 }
 
+/* Profile Photo */
 .profile-photo {
   max-width: 150px;
   width: 100%;
@@ -36,17 +47,14 @@ h2 {
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid #ddd;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   display: block;
-  margin: 0 auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0;
+  float: right;
+  margin-left: 1em;
 }
 
-.profile-photo:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
-
+/* List Items */
 ul {
   list-style-type: none;
   padding: 0;
@@ -57,23 +65,26 @@ li {
   margin: 0.5em 0;
   padding: 1em;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Event Photo */
 .event-photo {
   max-width: 100%;
-  width: 150px; /* Adjust size as needed */
+  width: 150px;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .event-photo:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Experience Item */
 .experience-item {
   display: flex;
   align-items: center;
@@ -84,71 +95,115 @@ li {
   margin-left: 1em;
 }
 
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  margin: 5% auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+#caption {
+  margin: 1em auto;
+  text-align: center;
+  color: #f1f1f1;
+  font-size: 1.2em;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 1em 0;
   background-color: #f1f1f1;
 }
 
-a {
+footer a {
   color: #4CAF50;
   text-decoration: none;
+  font-size: 1.1em;
+  background-color: #fff;
+  padding: 0.5em 1em;
+  border: 2px solid #4CAF50;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-a:hover {
-  text-decoration: underline;
+footer a:hover {
+  background-color: #4CAF50;
+  color: white;
 }
 
 /* Responsive Design for Medium Screens */
 @media (max-width: 1024px) and (min-width: 769px) {
   body {
-    padding: 0 2em; /* Add padding for medium screens to keep content well-spaced */
+      padding: 0 2em;
   }
 
   section {
-    margin: 2em auto; /* Center sections */
-    padding: 2em; /* Consistent padding */
-  }
-
-  li {
-    padding: 1em; /* Consistent padding inside list items */
+      margin: 2em auto;
+      padding: 2em;
   }
 
   .profile-photo {
-    max-width: 120px; /* Adjusted for medium screens */
+      max-width: 120px;
   }
 
   .event-photo {
-    width: 140px; /* Adjusted size for medium screens */
+      width: 140px;
   }
 }
 
-/* Responsive Design for Smaller Screens */
+/* Responsive Design for Small Screens */
 @media (max-width: 768px) {
   body {
-    padding: 0 1em;
+      padding: 0 1em;
   }
 
   section {
-    padding: 1.5em;
-    margin: 1.5em 0;
-  }
-
-  li {
-    padding: 0.75em;
+      margin: 1em auto;
+      padding: 1em;
   }
 
   .profile-photo {
-    max-width: 100px;
+      max-width: 100px;
   }
 
   .event-photo {
-    width: 120px;
+      width: 120px;
   }
 }
 
 @keyframes gradient {
-  0% { background-position: 0% 0%; }
-  50% { background-position: 100% 100%; }
-  100% { background-position: 0% 0%; }
+0% { background-position: 0% 0%; }
+50% { background-position: 100% 100%; }
+100% { background-position: 0% 0%; }
 }
