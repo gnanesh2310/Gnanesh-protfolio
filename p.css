@@ -1,145 +1,161 @@
-/* General styles */
+/* General Styles */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: linear-gradient(135deg, #ff9999, #66b3ff, #99ff99, #ffcc99);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  background: black;
+  color: #fff;
+  scroll-snap-type: y mandatory;
 }
 
-header {
-  background-color: #4CAF50;
-  color: white;
-  text-align: center;
-  padding: 2em 0;
+.full-screen {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row; /* Change to row to align text and image side by side */
+  align-items: center;
+  justify-content: center;
   position: relative;
-  clip-path: polygon(0 0, 100% 0%, 100% 70%, 0% 100%);
-  margin-bottom: 2em;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2.5em;
-}
-
-/* Ribbons */
-.ribbon {
-  position: absolute;
-  width: 200px; /* Increased width */
-  height: 200px; /* Increased height */
   overflow: hidden;
+  scroll-snap-align: start;
 }
 
-.ribbon::before {
-  content: "";
-  display: block;
+/* Left Half Text Styling */
+.intro-content {
+  width: 50%;
+  text-align: left; /* Align text to the left */
+  padding: 20px;
+}
+
+.intro-content h1 {
+  font-size: 3em;
+}
+
+.intro-content .main-role {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+.intro-content .additional-info {
+  font-size: 1.2em;
+  margin-top: 5px;
+}
+
+/* Right Half Background with Parallax Effect */
+.background-container {
   position: absolute;
   top: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: url('bg1.jpg') no-repeat center center;
+  background-attachment: fixed; /* Parallax effect */
+  background-size: cover;
+  z-index: -1;
+  pointer-events: none;
 }
 
-.ribbon-top-left {
-  top: -20px; /* Adjusted for increased size */
-  left: -20px; /* Adjusted for increased size */
+/* Section Titles */
+.section-title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 2.5em;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
 }
 
-.ribbon-top-left::before {
-  border-width: 100px 100px 0 0; /* Increased size */
-  border-color: #FF6347 transparent transparent transparent;
-}
-
-
-
-.ribbon-bottom-left {
-  bottom: -20px; /* Adjusted for increased size */
-  left: -20px; /* Adjusted for increased size */
-}
-
-.ribbon-bottom-left::before {
-  border-width: 0 100px 100px 0; /* Increased size */
-  border-color: transparent #FF6347 transparent transparent;
-}
-
-.ribbon-bottom-right {
-  bottom: -20px; /* Adjusted for increased size */
-  right: -20px; /* Adjusted for increased size */
-}
-
-
-
-/* Sections */
-section {
-  padding: 2em;
-  margin: 2em auto;
-  max-width: 900px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  border-bottom: 2px solid #4CAF50;
-  padding-bottom: 0.5em;
+.section-title::after {
+  content: "";
+  display: block;
+  height: 4px;
+  background-color: #00FF00; /* Green line color */
+  width: 100%;
+  margin-top: 5px;
 }
 
 /* Profile Photo */
+.profile-photo-container {
+  float: left;
+  margin-right: 2em;
+}
+
 .profile-photo {
-  max-width: 150px;
+  max-width: 200px;
   width: 100%;
   height: auto;
-  object-fit: cover;
   border-radius: 50%;
   border: 2px solid #ddd;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  display: block;
-  margin: 0;
-  float: right;
-  margin-left: 1em;
 }
 
-/* List Items */
+.intro-text {
+  max-width: 600px;
+}
+
+/* Projects Section */
+.projects {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.project-item {
+  margin: 1em;
+  cursor: pointer;
+}
+
+.project-item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+}
+
+/* Achievements Section */
 ul {
   list-style-type: none;
   padding: 0;
 }
 
 li {
-  background-color: #f9f9f9;
-  margin: 0.5em 0;
-  padding: 1em;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Event Photo */
-.event-photo {
-  max-width: 100%;
-  width: 150px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.event-photo:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Experience Item */
-.experience-item {
-  display: flex;
-  align-items: center;
   margin-bottom: 1em;
 }
 
-.experience-item img {
-  margin-left: 1em;
+/* Experiences Section */
+.event-photo {
+  max-width: 150px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin: 1em;
+  text-decoration: none;
+  color: #fff;
+}
+
+.contact-item img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.contact-item p {
+  margin: 0;
 }
 
 /* Modal Styles */
@@ -152,31 +168,23 @@ li {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .modal-content {
-  margin: 5% auto;
+  margin: auto;
   display: block;
   width: 80%;
   max-width: 700px;
 }
 
-#caption {
-  margin: 1em auto;
-  text-align: center;
-  color: #f1f1f1;
-  font-size: 1.2em;
-}
-
 .close {
   position: absolute;
-  top: 20px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
+  top: 10px;
+  right: 25px;
+  color: #fff;
+  font-size: 35px;
   font-weight: bold;
-  cursor: pointer;
 }
 
 .close:hover,
@@ -186,128 +194,54 @@ li {
   cursor: pointer;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1em;
-  background-color: #4CAF50;
-  color: white;
-}
-
-.download-button {
-  background-color: #FF6347;
-  color: white;
-  padding: 1em 2em;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-  display: inline-block;
-}
-
-.download-button:hover {
-  background-color: #ff4500;
-}
-
 /* Responsive Design */
-@media (max-width: 1024px) and (min-width: 769px) {
-  body {
-      padding: 0 2em;
+@media (max-width: 768px) {
+  .full-screen {
+    flex-direction: column; /* Stack text and image on smaller screens */
   }
 
-  section {
-      margin: 2em auto;
-      padding: 2em;
+  .intro-content {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .intro-content h1 {
+    font-size: 2em;
+  }
+
+  .intro-content .main-role {
+    font-size: 1.2em;
+  }
+
+  .intro-content .additional-info {
+    font-size: 1em;
+  }
+
+  .profile-photo-container {
+    float: none;
+    margin: 0 auto 2em auto;
   }
 
   .profile-photo {
-      max-width: 120px;
+    max-width: 150px;
+  }
+
+  .projects {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-item img {
+    width: 80px;
+    height: 80px;
   }
 
   .event-photo {
-      width: 140px;
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-      padding: 0 1em;
+    max-width: 120px;
   }
 
-  section {
-      padding: 1.5em;
-      margin: 1.5em 0;
-  }
-
-  .profile-photo {
-      max-width: 100px;
-  }
-
-  .event-photo {
-      width: 120px;
-  }
-}
-
-/* Keyframes */
-@keyframes gradient {
-  0% {
-      background-position: 0% 50%;
-  }
-  50% {
-      background-position: 100% 50%;
-  }
-  100% {
-      background-position: 0% 50%;
-  }
-}
-/* Responsive Design */
-@media (max-width: 768px) {
-  .btext {
-      font-size: 1.5em; /* Increase font size for medium screens */
-      padding: 20px;
-      width: 90%;
-      max-width: none;
-      white-space: normal;
-  }
-
-  .price {
-      font-size: 1.5em;
-  }
-
-  .paragraph {
-      padding: 30px 20px;
-  }
-
-  input, button {
-      width: 100%;
-      max-width: none;
-  }
-
-  .bimg1, .bimg2, .bimg3 {
-      height: 40vh;
-  }
-
-  #returnToTopBtn {
-      bottom: 20px;
-      right: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .btext {
-      font-size: 1.8em; /* Increase font size for smaller screens */
-      padding: 15px;
-      width: 90%;
-  }
-
-  .price {
-      font-size: 1.2em;
-  }
-
-  .paragraph {
-      padding: 20px 10px;
-  }
-
-  .bimg1, .bimg2, .bimg3 {
-      height: 35vh;
+  .contact-item img {
+    width: 25px;
+    height: 25px;
   }
 }
