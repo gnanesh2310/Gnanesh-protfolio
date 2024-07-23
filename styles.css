@@ -54,7 +54,6 @@ body {
   background-size: cover;
   z-index: -1;
   pointer-events: none;
-  
 }
 
 /* Section Titles */
@@ -194,3 +193,100 @@ li {
   text-decoration: none;
   cursor: pointer;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .full-screen {
+    flex-direction: column; /* Stack text and image on smaller screens */
+  }
+
+  .intro-content {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .intro-content h1 {
+    font-size: 2em;
+  }
+
+  .intro-content .main-role {
+    font-size: 1.2em;
+  }
+
+  .intro-content .additional-info {
+    font-size: 1em;
+  }
+
+  .profile-photo-container {
+    float: none;
+    margin: 0 auto 2em auto;
+  }
+
+  .profile-photo {
+    max-width: 150px;
+  }
+
+  .projects {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-item img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .event-photo {
+    max-width: 120px;
+  }
+
+  .contact-item img {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  .full-screen {
+    display: block;
+    height: auto;
+    overflow: visible;
+  }
+
+  .background-container {
+    display: none; /* Hide background images in print */
+  }
+
+  .intro-content h1, .intro-content .main-role, .intro-content .additional-info {
+    font-size: 1.5em; /* Adjust font sizes for print */
+  }
+
+  .projects, .achievements, .experiences, .contact-methods {
+    page-break-inside: avoid; /* Avoid breaking sections across pages */
+  }
+}
+/* Resume Section */
+#resume {
+  text-align: center;
+  margin: 20px;
+}
+
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: #007BFF; /* Blue color */
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.download-button:hover {
+  background-color: #0056b3; /* Darker blue color */
+}
+
