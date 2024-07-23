@@ -259,3 +259,55 @@ footer {
       background-position: 0% 50%;
   }
 }
+/* Responsive Design */
+@media (max-width: 768px) {
+  .btext {
+      font-size: 1.5em; /* Increase font size for medium screens */
+      padding: 20px;
+      width: 90%;
+      max-width: none;
+      white-space: normal;
+  }
+
+  .price {
+      font-size: 1.5em;
+  }
+
+  .paragraph {
+      padding: 30px 20px;
+  }
+
+  input, button {
+      width: 100%;
+      max-width: none;
+  }
+
+  .bimg1, .bimg2, .bimg3 {
+      height: 40vh;
+  }
+
+  #returnToTopBtn {
+      bottom: 20px;
+      right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btext {
+      font-size: 1.8em; /* Increase font size for smaller screens */
+      padding: 15px;
+      width: 90%;
+  }
+
+  .price {
+      font-size: 1.2em;
+  }
+
+  .paragraph {
+      padding: 20px 10px;
+  }
+
+  .bimg1, .bimg2, .bimg3 {
+      height: 35vh;
+  }
+}
