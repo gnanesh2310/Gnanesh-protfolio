@@ -4,83 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gnanesh's Portfolio</title>
-    <link rel="stylesheet" href="p.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Gnanesh's Portfolio</h1>
-        <div class="ribbon ribbon-top-left"></div>
-        <div class="ribbon ribbon-top-right"></div>
-        <div class="ribbon ribbon-bottom-left"></div>
-        <div class="ribbon ribbon-bottom-right"></div>
-    </header>
 
-    <section id="introduction">
-        <h2>Introduction</h2>
-        <img src="passport-size-photo.JPG" alt="Gnanesh's Photo" class="profile-photo">
-        <p>Hi, I'm Karanam Gnanesh Chowdary, a tech enthusiast and aspiring entrepreneur, studying at VNIT Nagpur. I have a passion for chess and have been actively involved in various tech and entrepreneurial activities. I also enjoy playing sports like kabaddi, volleyball, and chess.</p>
+    <!-- First Full-Screen Section -->
+    <section class="full-screen" id="intro" style="display: flex;">
+        <div class="intro-content" >
+            <h1>Hi, I'm Karanam Gnanesh Chowdary from EEE</h1>
+            <p class="main-role">Web Developer</p>
+            <p class="additional-info">Tech Enthusiast, Aspiring Entrepreneur</p>
+        </div>
+        <div class="background-container"></div> <!-- Parallax background -->
     </section>
 
-    <section id="technical-skills">
-        <h2>Technical Skills</h2>
-        <ul>
-            <li>Web Development: Familiar with HTML, CSS, JavaScript, and responsive designs.</li>
-            <li>Editing: Skilled in video and image editing with tools like Microsoft Clipchamp and Photoshop.</li>
-            <li>Programming Languages: C and Python</li>
-        </ul>
+    <!-- Second Full-Screen Section -->
+    <section class="full-screen" id="about">
+        <div class="profile-photo-container">
+            <img src="passport-size-photo.JPG" alt="Gnanesh's Photo" class="profile-photo">
+        </div>
+        <div class="intro-text">
+            <h2>Introduction</h2>
+            <p>Hi, I'm Karanam Gnanesh Chowdary, a tech enthusiast and aspiring entrepreneur, studying at VNIT Nagpur. I have a passion for chess and have been actively involved in various tech and entrepreneurial activities. I also enjoy playing sports like kabaddi, volleyball, and chess.</p>
+        </div>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>Chess Game: <a href="https://gnanesh2310.github.io/mychess" target="_blank">https://gnanesh2310.github.io/mychess</a></li>
-            <li>Parallax Website: <a href="https://gnanesh2310.github.io/PARLLAX-WEBSITE/3rd-project.html" target="_blank">https://gnanesh2310.github.io/PARLLAX-WEBSITE/3rd-project.html</a></li>
-            <li>YouTube Layout: <a href="https://gnanesh2310.github.io/1st-website/1st.html" target="_blank">https://gnanesh2310.github.io/1st-website/1st.html</a></li>
-            <li>Rock-Paper-Scissors Game: <a href="https://gnanesh2310.github.io/rock-paper-scissors-game/10-rock-paper-scissors" target="_blank">https://gnanesh2310.github.io/rock-paper-scissors-game/10-rock-paper-scissors</a></li>
-        </ul>
+    <!-- Third Full-Screen Section -->
+    <section class="full-screen" id="projects">
+        <h2 class="section-title">My Previous Projects</h2>
+        <div class="projects">
+            <div class="project-item" onclick="window.open('https://gnanesh2310.github.io/mychess', '_blank')">
+                <img src="chess.jpg" alt="Chess Game">
+            </div>
+            <div class="project-item" onclick="window.open('https://gnanesh2310.github.io/PARLLAX-WEBSITE/3rd-project.html', '_blank')">
+                <img src="prallax.jpg" alt="Parallax Website">
+            </div>
+            <div class="project-item" onclick="window.open('https://gnanesh2310.github.io/1st-website/1st.html', '_blank')">
+                <img src="youtube.jpg" alt="YouTube Layout">
+            </div>
+            <div class="project-item" onclick="window.open('https://gnanesh2310.github.io/rock-paper-scissors-game/10-rock-paper-scissors', '_blank')">
+                <img src="rpg.jpg" alt="Rock-Paper-Scissors Game">
+            </div>
+        </div>
     </section>
 
-    <section id="achievements">
-        <h2>Achievements</h2>
+    <!-- Fourth Full-Screen Section -->
+    <section class="full-screen" id="achievements">
+        <h2 class="section-title">Achievements</h2>
         <ul>
-            <li>Most of my achievements are in sports. Some are:</li>
             <li>Played in district kabaddi team as a captain.</li>
             <li>Won 3rd prize in district chess tournament.</li>
             <li>Won Best Under-Rated Team award in VNIT Chess League.</li>
         </ul>
     </section>
 
-    <section id="experiences">
-        <h2>Experiences</h2>
+    <!-- Fifth Full-Screen Section -->
+    <section class="full-screen" id="experiences" >
+        <h2 class="section-title">Experiences</h2>
         <ul>
             <li>
-                <div class="experience-item">
-                    <p>Part of Shadow Club performed for Fresher's Day</p>
-                    <img src="WhatsApp-Image-2024-07-21-at-00.52.21_c3e940a0.jpg" alt="Shadow Club Performance" class="event-photo">
-                </div>
+                <li>Part of Shadow Club performed for Fresher's Day</li>
+                <img src="WhatsApp-Image-2024-07-21-at-00.52.21_c3e940a0.jpg" alt="Shadow Club Performance" class="event-photo" onclick="openModal(this)">
             </li>
             <li>Part of the 1st year organizing team for E-Cell events like NEO, BIZ-MUN, CEO.</li>
         </ul>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Phone: 7675806215</p>
-        <p>Email: gnanesh98@example.com</p>
-        <p>Instagram: <a href="https://www.instagram.com/gnanesh2310/?igsh=MWZwanpzemdxNnpyaQ%3D%3D" target="_blank">instagram.com/gnanesh2310</a></p>
-        <p>GitHub: <a href="https://github.com/gnanesh2310" target="_blank">github.com/gnanesh2310</a></p>
+    <!-- Sixth Full-Screen Section -->
+    <section class="full-screen" id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-methods">
+            <a href="tel:7675806215" class="contact-item">
+                <img src="phone.jpg" alt="Phone">
+                <p>Phone: 7675806215</p>
+            </a>
+            <a href="mailto:gnanesh98@example.com" class="contact-item">
+                <img src="gmail.jpg" alt="Email">
+                <p>Email: gnanesh98@example.com</p>
+            </a>
+            <a href="https://www.instagram.com/gnanesh2310/?igsh=MzNlNGNkZmQlMTY=" class="contact-item">
+                <img src="insta.jpg" alt="Instagram">
+                <p>Instagram</p>
+            </a>
+            <a href="https://github.com/gnanesh2310" class="contact-item">
+                <img src="git.jpg" alt="LinkedIn">
+                <p>Github</p>
+            </a>
+        </div>
     </section>
 
-    <footer>
-        <a href="portfolio.pdf" download="Gnanesh_Portfolio.pdf" class="download-button">Download Portfolio</a>
-    </footer>
-
+    <!-- Modal for Enlarged Photos -->
     <div id="myModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="img01">
-        <div id="caption"></div>
     </div>
 
-    <script src="p.js"></script>
+    <script>
+        function openModal(img) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
+
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function() { 
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    </script>
+
 </body>
 </html>
