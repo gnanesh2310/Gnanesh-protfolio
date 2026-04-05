@@ -670,7 +670,7 @@ function goLink(url){ window.open(url,'_blank'); }
 
 // Toast
 function showToast(name){
-  document.getElementById('toastSub').textContent = name + ' just sent you a message!';
+  document.getElementById('toastSub').textContent = name + ' just sent your message to connect!';
   const t=document.getElementById('toast');
   t.classList.add('show');
   setTimeout(()=>t.classList.remove('show'),5000);
