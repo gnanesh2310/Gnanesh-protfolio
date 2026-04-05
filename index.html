@@ -82,6 +82,7 @@
     .hero-tag::before{content:'';width:28px;height:1px;background:var(--accent);}
     .hero-text h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:600;line-height:1.08;margin-bottom:1rem;opacity:0;animation:fadeUp 0.8s 0.4s forwards;}
     .hero-text h1 .line{display:block;overflow:hidden;}
+    .hero-text h1 .line1{display:block;overflow:hidden; color: #00ccff;}
     .hero-text h1 span{color:var(--accent);}
     .hero-sub{font-size:clamp(0.9rem,2vw,1.1rem);color:var(--muted);line-height:1.7;max-width:480px;margin-bottom:1.8rem;opacity:0;animation:fadeUp 0.8s 0.6s forwards;}
     .hero-roles{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2rem;opacity:0;animation:fadeUp 0.8s 0.7s forwards;}
@@ -295,7 +296,7 @@
 <!-- TOAST -->
 <div class="toast" id="toast">
   <div class="toast-icon">🔔</div>
-  <div class="toast-title">New message received!</div>
+  <div class="toast-title">message sent!</div>
   <div class="toast-sub" id="toastSub">Someone wants to connect.</div>
 </div>
 
@@ -333,9 +334,9 @@
     <div class="hero-text">
       <div class="hero-tag">EEE @ VNIT Nagpur</div>
       <h1>
-        <span class="line">Karanam</span>
+        <span class="line1">Karanam</span>
         <span class="line"><span>Gnanesh</span></span>
-        <span class="line">Chowdary</span>
+        <span class="line1">Chowdary</span>
       </h1>
       <p class="hero-sub">Building at the intersection of electronics & code. 3rd year EEE student passionate about hardware, web, and entrepreneurship.</p>
       <div class="hero-roles">
@@ -374,7 +375,7 @@
     <div class="reveal-left">
       <div class="about-text">
         <p>I'm a 3rd year EEE student at VNIT Nagpur with a deep interest in electronics systems and web development. I build things that live at the intersection of hardware and software.</p>
-        <p>Beyond tech, I'm a competitive chess player, a kabaddi captain, and someone who thrives in collaborative, high-energy environments — from organizing E-Cell events to performing with the Shadow Club.</p>
+        <p>Beyond tech, I'm a competitive chess player and someone who thrives in collaborative, high-energy environments — from organizing events to performing with the Shadow Club.</p>
       </div>
       <div class="about-stats">
         <div class="stat-card"><div class="stat-num">4+</div><div class="stat-lbl">Web Projects</div></div>
@@ -386,10 +387,10 @@
     <div class="reveal-right">
       <div class="skills-h">Skill Proficiency</div>
       <div id="skillsList">
-        <div class="skill-row"><div class="skill-top"><span class="skill-name">HTML / CSS / JavaScript</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill" data-w="80"></div></div></div>
+        <div class="skill-row"><div class="skill-top"><span class="skill-name">HTML / CSS / JavaScript,React</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill" data-w="80"></div></div></div>
         <div class="skill-row"><div class="skill-top"><span class="skill-name">Electronics & Circuits</span><span class="skill-pct">75%</span></div><div class="skill-bar"><div class="skill-fill" data-w="75"></div></div></div>
-        <div class="skill-row"><div class="skill-top"><span class="skill-name">Arduino / Embedded</span><span class="skill-pct">70%</span></div><div class="skill-bar"><div class="skill-fill" data-w="70"></div></div></div>
-        <div class="skill-row"><div class="skill-top"><span class="skill-name">Python</span><span class="skill-pct">60%</span></div><div class="skill-bar"><div class="skill-fill" data-w="60"></div></div></div>
+        <div class="skill-row"><div class="skill-top"><span class="skill-name">Arduino / Esp / Embedded</span><span class="skill-pct">70%</span></div><div class="skill-bar"><div class="skill-fill" data-w="70"></div></div></div>
+        <div class="skill-row"><div class="skill-top"><span class="skill-name">C / Python</span><span class="skill-pct">60%</span></div><div class="skill-bar"><div class="skill-fill" data-w="60"></div></div></div>
         <div class="skill-row"><div class="skill-top"><span class="skill-name">Power Systems / MATLAB</span><span class="skill-pct">65%</span></div><div class="skill-bar"><div class="skill-fill" data-w="65"></div></div></div>
       </div>
     </div>
@@ -476,10 +477,7 @@
       </div>
     </div>
 
-    <div class="add-card" id="addCard" onclick="alert('To add a project: copy any pcard div in the HTML, fill in your details, set data-cat to webdev/electronics/electrical.')">
-      <div class="add-icon">+</div>
-      <div>Add another project</div>
-    </div>
+    
 
   </div>
 </section>
@@ -491,7 +489,7 @@
   <div class="ach-list">
     <div class="ach-item reveal"><div class="ach-icon">♟</div><div><h4>3rd Prize — District Chess Tournament</h4><p>Competed and placed 3rd in a district-level chess tournament against strong competition.</p></div></div>
     <div class="ach-item reveal"><div class="ach-icon">🏆</div><div><h4>Best Under-Rated Team — VNIT Chess League</h4><p>Stood out among peers to win the Best Under-Rated Team award in VNIT Chess League.</p></div></div>
-    <div class="ach-item reveal"><div class="ach-icon">🏃</div><div><h4>Captain — District Kabaddi Team</h4><p>Led the district kabaddi team as captain, demonstrating leadership and team coordination.</p></div></div>
+    <div class="ach-item reveal"><div class="ach-icon">🏆</div><div><h4>1st Place — Poster Making Competition</h4><p>Created a winning poster for the independence day poster making competition.</p></div></div>
     <!-- ADD MORE: copy ach-item div above -->
   </div>
 </section>
@@ -501,6 +499,23 @@
   <div class="sec-label reveal">04 — Experience</div>
   <div class="sec-title reveal">Where I've <span>contributed</span></div>
   <div class="timeline">
+    <div class="tl-item reveal">
+      <div class="tl-dot">🎭</div>
+      <div class="tl-box">
+        <div class="tl-org">VNIT Nagpur — Shadow Club</div>
+        <h4>Project Head — Tesla club of innovation</h4>
+        <p>Part of Tesla Club of Inovation Council 25-26 as Project Head , contributing to valiable projects and devoplment of club.</p>
+      </div>
+
+      <div class="tl-item reveal">
+      <div class="tl-dot">🎭</div>
+      <div class="tl-box">
+        <div class="tl-org">VNIT Nagpur — Shadow Club</div>
+        <h4>Technical secaratry — EEE department</h4>
+        <p>Served as Technical Secaratry in 2nd year for EEE department 24-25.</p>
+      </div>
+    </div>
+    </div>
     <div class="tl-item reveal">
       <div class="tl-dot">🎭</div>
       <div class="tl-box">
@@ -609,7 +624,7 @@ window.addEventListener('scroll', ()=>{
 }, {passive:true});
 
 // Skills ticker
-const skills = ['HTML / CSS / JS','Arduino / ESP32','Circuit Design','Python','Power Systems','IoT','MATLAB','Web Dev','EEE','Problem Solving','Chess ♟','Kabaddi 🏃'];
+const skills = ['HTML / CSS / JS','Arduino / ESP32','Circuit Design','Python','Power Systems','IoT','MATLAB','Web Dev','EEE','Problem Solving'];
 const tk = document.getElementById('ticker');
 const items = [...skills,...skills].map(s=>`<span class="ticker-item"><span class="dot"></span>${s}</span>`).join('');
 tk.innerHTML = items + items;
